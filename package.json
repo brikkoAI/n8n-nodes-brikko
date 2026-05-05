@@ -1,0 +1,81 @@
+{
+  "name": "n8n-nodes-brikko",
+  "version": "0.1.0",
+  "description": "Privacy-aware n8n nodes by Brikko: mask Russian and English PII before LLM calls (152-ФЗ compliant)",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "brikko",
+    "pii",
+    "anonymization",
+    "privacy",
+    "llm",
+    "gpt",
+    "claude",
+    "yandexgpt",
+    "gigachat",
+    "152-fz",
+    "russia"
+  ],
+  "license": "MIT",
+  "homepage": "https://brikko.ru",
+  "author": {
+    "name": "Brikko",
+    "email": "support@brikko.ru",
+    "url": "https://brikko.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brikkoAI/n8n-nodes-brikko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brikkoAI/n8n-nodes-brikko/issues"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && copyfiles \"nodes/**/*.svg\" dist",
+    "dev": "tsc --watch",
+    "lint": "eslint nodes credentials lib --ext .ts",
+    "lint:fix": "eslint nodes credentials lib --ext .ts --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/BrikkoApi.credentials.js",
+      "dist/credentials/BrikkoLocalApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/BrikkoAnonymize/BrikkoAnonymize.node.js",
+      "dist/nodes/BrikkoRestore/BrikkoRestore.node.js",
+      "dist/nodes/BrikkoChat/BrikkoChat.node.js",
+      "dist/nodes/BrikkoDetectPii/BrikkoDetectPii.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "n8n-workflow": "^1.82.0",
+    "typescript": "^5.4.5",
+    "undici": "^6.19.8",
+    "vitest": "^1.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

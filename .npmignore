@@ -1,0 +1,15 @@
+.github/
+nodes/
+credentials/
+lib/
+tests/
+src/
+*.ts
+!*.d.ts
+tsconfig*.json
+.eslintrc*
+.editorconfig
+.gitignore
+*.tsbuildinfo
+coverage/
+vitest.config.ts
