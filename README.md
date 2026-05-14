@@ -1,5 +1,14 @@
 # n8n-nodes-brikko
 
+[![npm version](https://img.shields.io/npm/v/n8n-nodes-brikko.svg)](https://www.npmjs.com/package/n8n-nodes-brikko)
+[![npm downloads](https://img.shields.io/npm/dm/n8n-nodes-brikko.svg)](https://www.npmjs.com/package/n8n-nodes-brikko)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![n8n community node](https://img.shields.io/badge/n8n-community%20node-FF6D5A.svg)](https://docs.n8n.io/integrations/community-nodes/)
+[![GitHub stars](https://img.shields.io/github/stars/brikkoAI/n8n-nodes-brikko?style=social)](https://github.com/brikkoAI/n8n-nodes-brikko/stargazers)
+[![152-ФЗ](https://img.shields.io/badge/152--ФЗ-compliant-success.svg)](#compliance-notes--по-152-фз)
+
+> **Часть [Brikko Privacy Ecosystem](https://brikko.ru)** — open-source инфраструктура маскинга персональных данных перед AI для русского рынка.
+
 > Privacy-aware n8n nodes by [Brikko](https://brikko.ru). Mask Russian and
 > English PII before any data leaves your workflow for an LLM. Built for
 > teams that need 152-ФЗ compliance.
@@ -7,8 +16,7 @@
 > Узлы n8n с защитой персональных данных: маскируем PII перед отправкой
 > в LLM. Для бизнеса РФ, работающего по 152-ФЗ.
 
-[![npm](https://img.shields.io/npm/v/n8n-nodes-brikko.svg)](https://www.npmjs.com/package/n8n-nodes-brikko)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+This is an **[n8n community node](https://docs.n8n.io/integrations/community-nodes/)** — install через Settings → Community Nodes в self-hosted n8n.
 
 ---
 
@@ -277,3 +285,16 @@ pnpm run lint
 MIT — see [LICENSE](LICENSE).
 
 Brikko (brikko.ru), 2026.
+
+---
+
+## 🔗 Связанные продукты Brikko
+
+| Артефакт | Установка | Аудитория |
+|---|---|---|
+| [brikko-studio](https://github.com/brikkoAI/brikko-studio) | `curl install.brikko.ru/studio.sh \| bash` | Desktop AI agent с MCP |
+| [brikko-shield](https://github.com/brikkoAI/brikko-shield) | Chrome Web Store (скоро) | Маскинг в ChatGPT/Claude.ai |
+| [brikko-cli](https://github.com/brikkoAI/brikko-cli) | `npm install -g brikko-cli` | CLI для Studio |
+| [brikko-pii-skill](https://github.com/brikkoAI/brikko-pii-skill) | `git clone` | Skill для Claude Code/Cursor |
+| **n8n-nodes-brikko** ★ (вы здесь) | `npm install n8n-nodes-brikko` | Маскинг в n8n workflows |
+| [presidio-ru-recognizers](https://github.com/brikkoAI/presidio-ru-recognizers) | `pip install presidio-ru-recognizers` | Python recognizers для Presidio |
